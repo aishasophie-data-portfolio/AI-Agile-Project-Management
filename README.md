@@ -59,6 +59,21 @@ Key topics include:
 
 Statistical methods include descriptive statistics, Cronbach's alpha, Wilcoxon signed-rank tests, Spearman rank correlations, effect sizes, and Holm correction where appropriate.
 
+## 📂 Project Structure
+
+AI-Agile-Project-Management/
+├── README.md
+└── notebooks/
+    ├── README.md
+    ├── 01_sprint_delay_prediction.ipynb
+    └── 02_survey_analysis.ipynb
+
+
+## 📊 Project Notebooks
+
+ [Sprint Delay Prediction](notebooks/01_sprint_delay_prediction.ipynb) – Predictive modelling of sprint delays using machine learning.
+ [Survey Analysis](notebooks/02_survey_analysis.ipynb) – Analysis of survey responses on AI adoption, trust, human-AI collaboration and AI governance.
+
 ## Technology Stack
 
 - **Programming:** Python
