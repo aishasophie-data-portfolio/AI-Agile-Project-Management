@@ -9,6 +9,12 @@ The research combines machine learning, operational data analysis, and real agil
 The core idea is that AI tools should augment human expertise rather than replace human decision-making.
 The human-in-the-loop approach served as the fundamental starting point for this research.
 
+## Research questions
+- Can sprint delivery risk be predicted from information intended to be available at sprint start?
+- How do Random Forest, XGBoost and a multilayer perceptron compare on this tabular dataset?
+- How can model explanations and confidence-based routing support human review?
+- What do Agile practitioners report about AI efficiency, trust, explainability and governance?
+
 ## Research Objectives
 
 - **Predict:** Identify potential sprint delivery risks using machine learning.
@@ -33,7 +39,7 @@ The study follows a mixed-methods approach, combining three complementary empiri
 
 **Key finding:** XGBoost achieved a macro F1-score of 0.895 and a recall of 0.925 for delayed sprint iterations on the independent test dataset. It demonstrated the potential of machine learning and in the case of the dataset, the tree model XGBoost, for identifying delivery risks in agile sprints.
 
-### 2. Agile User Story Analysis
+### 2. Agile User Story Analysis - not included, as it was the research part of my thesis partner
 
 **Dataset:** User Story data
 
@@ -65,14 +71,15 @@ AI-Agile-Project-Management/
 ├── README.md
 └── notebooks/
     ├── README.md
-    ├── 01_sprint_delay_prediction.ipynb
-    └── 02_survey_analysis.ipynb
+    ├── 01_sprint_delay_prediction_portfolio.ipynb
+    └── 02_survey_analysis_portfolio.ipynb
 
 
 ## 📊 Project Notebooks
 
- [Sprint Delay Prediction](notebooks/01_sprint_delay_prediction.ipynb) – Predictive modelling of sprint delays using machine learning.
- [Survey Analysis](notebooks/02_survey_analysis.ipynb) – Analysis of survey responses on AI adoption, trust, human-AI collaboration and AI governance.
+ [Sprint Delay Prediction](notebooks/01_sprint_delay_prediction_portfolio.ipynb) – Predictive modelling of sprint delays using machine learning.
+ 
+ [Survey Analysis](notebooks/02_survey_analysis_portfolio.ipynb) – Analysis of survey responses on AI adoption, trust, human-AI collaboration and AI governance.
 
 ## Technology Stack
 
