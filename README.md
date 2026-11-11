@@ -1,59 +1,64 @@
-# AI-Agile-Project-Management
-Master’s thesis on AI-augmented Agile Project Management: predicting sprint delays with Machine Learning and XGBoost, applying SHAP for explainability, and exploring AI routing mechanisms, human-in-the-loop decision-making, and AI governance.
+# AI-Augmented Agile Project Management
+
+**Master’s thesis | Business Analytics | Machine Learning | Explainable AI | AI Governance**
+
+How can AI support Agile teams in identifying sprint delivery risks, improving decision-making, and integrating predictive insights into project management while keeping humans in control?
+
+This project combines machine learning, operational data analysis, and survey research to develop an **AI-Augmented Agile Project Management Framework** for responsible, data-driven decision support.
+
+The central principle: AI should augment human expertise, not replace human judgment.
 
 ## Overview
 
-This project investigates how AI can support Agile teams in identifying delivery risks, understanding workflow patterns, and making  thoroughly tested project management decisions.
-The research combines machine learning, operational data analysis, and real agile practitioner survey responses to develop an empirically grounded **AI-Augmented Agile Project Management Framework**.
+The project explores two complementary perspectives:
 
-The core idea is that AI tools should augment human expertise rather than replace human decision-making.
-The human-in-the-loop approach served as the fundamental starting point for this research.
+- **Technical perspective:** Predicting sprint delays using machine learning, evaluating model performance, and investigating explainability and human-in-the-loop routing.
+- **Human and organisational perspective:** Analysing Agile practitioners’ responses concerning AI adoption, trust, transparency, human oversight, and governance.
 
-## Research questions
-- Can sprint delivery risk be predicted from information intended to be available at sprint start?
-- How do Random Forest, XGBoost and a multilayer perceptron compare on this tabular dataset?
+Together, these perspectives inform a conceptual framework for integrating AI into Agile project management.
+
+## Research Questions
+
+- Can sprint delivery risks be predicted from information intended to be available at sprint start?
+- How do Random Forest, XGBoost, and a Multilayer Perceptron (MLP) compare on the available dataset?
 - How can model explanations and confidence-based routing support human review?
-- What do Agile practitioners report about AI efficiency, trust, explainability and governance?
+- What do Agile practitioners report about AI efficiency, trust, explainability, and governance?
 
 ## Research Objectives
 
 - **Predict:** Identify potential sprint delivery risks using machine learning.
-- **Understand:** Analyse operational patterns in Agile workflows and user stories.
-- **Contextualise:** Investigate agile practitioners' opinions of AI adoption, trust, and decision support.
-- **Govern:** Development of a framework for successful AI implementation that integrates the aspects of explainability, human oversight, and AI governance into agile project management.
+- **Understand:** Examine predictive performance and the factors associated with model predictions.
+- **Contextualise:** Investigate practitioners’ perspectives on AI adoption, trust, and decision support.
+- **Govern:** Develop a framework integrating explainability, human oversight, and responsible AI governance.
 
 ## Methodology
 
-The study follows a mixed-methods approach, combining three complementary empirical perspectives.
+The research follows a mixed-methods approach, combining predictive modelling with survey-based statistical analysis.
 
 ### 1. Sprint Delay Risk Prediction
 
 **Dataset:** JIRA Agile project data
 
-- Data preprocessing and exploratory data analysis using Python.
-- Feature engineering and classification model development.
-- Comparison of a Multilayer Perceptron (MLP), Random Forest, and XGBoost.
-- Model evaluation using metrics including macro F1-score and recall.
-- Model interpretation using SHAP.
-- Exploration of a Human-in-the-Loop routing approach for uncertain predictions.
+The technical analysis includes:
 
-**Key finding:** XGBoost achieved a macro F1-score of 0.895 and a recall of 0.925 for delayed sprint iterations on the independent test dataset. It demonstrated the potential of machine learning and in the case of the dataset, the tree model XGBoost, for identifying delivery risks in agile sprints.
+- Data preprocessing and exploratory data analysis (EDA).
+- Feature engineering and classification.
+- Comparison of Random Forest, XGBoost, and a Multilayer Perceptron (MLP).
+- Model evaluation using macro F1-score, recall, and other classification metrics.
+- Model explainability using SHAP.
+- Exploration of a human-in-the-loop routing approach for uncertain predictions.
 
-### 2. Agile User Story Analysis - not included, as it was the research part of my thesis partner
+**Key result**
 
-**Dataset:** User Story data
+XGBoost achieved a macro F1-score of **0.895** and a recall of **0.925** for delayed sprint iterations on the independent test dataset.
 
-- Exploratory analysis of user story characteristics and story points.
-- Investigation of patterns across Agile iterations.
-- Examination of operational indicators that can contextualise AI-supported project decisions.
+These results demonstrate promising predictive performance on the available data. Further validation would be required before applying the model in a live project management environment.
 
-This analysis complements the predictive modelling by examining the operational context in which AI-generated insights may be used.
+### 2. Agile Practitioner Survey Analysis
 
-### 3. Practitioner Survey
+**Dataset:** Survey responses from Agile practitioners
 
-**Dataset:** Survey responses from agile practitioners
-
-The survey explores the human, organisational, and governance dimensions of AI adoption in Agile Project Management.
+The survey investigates human, organisational, and governance-related dimensions of AI adoption in Agile project management.
 
 Key topics include:
 
@@ -63,9 +68,19 @@ Key topics include:
 - AI adoption and organisational readiness.
 - Data privacy and governance.
 
-Statistical methods include descriptive statistics, Cronbach's alpha, Wilcoxon signed-rank tests, Spearman rank correlations, effect sizes, and Holm correction where appropriate.
+Statistical methods include:
 
-## 📂 Project Structure
+- Descriptive statistics.
+- Cronbach’s alpha for internal consistency.
+- Wilcoxon signed-rank tests.
+- Spearman rank correlations.
+- Effect sizes and Holm correction, where appropriate.
+
+The survey analysis complements the technical modelling by examining the perspectives and concerns that may influence the adoption of AI-supported decision-making.
+
+**Research limitation:** The survey has a limited sample size. Its findings should therefore be interpreted as exploratory rather than representative of all Agile practitioners.
+
+## Project Structure
 
 AI-Agile-Project-Management/
 ├── README.md
@@ -75,76 +90,89 @@ AI-Agile-Project-Management/
     └── 02_survey_analysis_portfolio.ipynb
 
 
-## 📊 Project Notebooks
+## Project Notebooks
 
- [Sprint Delay Prediction](notebooks/01_sprint_delay_prediction_portfolio.ipynb) – Predictive modelling of sprint delays using machine learning.
- 
- [Survey Analysis](notebooks/02_survey_analysis_portfolio.ipynb) – Analysis of survey responses on AI adoption, trust, human-AI collaboration and AI governance.
+**01 — [Sprint Delay Prediction](notebooks/01_sprint_delay_prediction_portfolio.ipynb)**
+
+Predictive modelling, model comparison, evaluation, and explainability for sprint delivery risk.
+
+**02 — [Survey Analysis](notebooks/02_survey_analysis_portfolio.ipynb)**
+
+Statistical analysis of Agile practitioners’ perspectives on AI adoption, trust, human-AI collaboration, and governance.
+
 
 ## Technology Stack
 
 - **Programming:** Python
 - **Data Analysis:** Pandas, NumPy
-- **Machine Learning:** MLP, Random Forest, XGBoost
+- **Machine Learning:** Scikit-learn, Random Forest, XGBoost, MLP
 - **Explainable AI:** SHAP
 - **Visualisation:** Matplotlib
-- **Analytics & Reporting:** Power BI
-- **Research Methods:** Mixed-methods research, statistical hypothesis testing, exploratory data analysis
+- **Statistical Analysis:** SciPy, hypothesis testing, effect sizes
+- **Research Methods:** Exploratory data analysis, mixed-methods research
 
-## Key Findings
+## Key Findings and Implications
 
-- Machine learning can help identify potential sprint delivery risks.
-- Model evaluation should reflect the business consequences of missed delays, not accuracy alone.
-- Operational data provides context for interpreting predictive signals.
-- Human oversight remains central to responsible AI-augmented decision-making.
-- Explainability as a threshold for trust and organizational accountability are important factors for the acceptance 
-and successful implementation of AI tools in agile organizations.
+- Machine learning can help identify potential sprint delivery risks in the available dataset.
+- Model evaluation should consider the consequences of missed delays, not accuracy alone.
+- Explainability can help practitioners understand model predictions and assess their relevance.
+- Human oversight remains important when AI-generated insights inform consequential decisions.
+- Organisational readiness, trust, transparency, and governance are relevant considerations for AI adoption.
+
+These findings inform a proposed framework rather than demonstrating that AI adoption will automatically improve delivery performance.
 
 ## Main Contribution: AI-Augmented Agile Project Management Framework
 
-The principal contribution is an empirically derived framework that connects technical prediction with operational decision-making and responsible AI implementation.
+The principal contribution is a conceptual framework connecting predictive insights with operational decision-making and responsible AI implementation.
 
-The framework integrates:
+The framework consists of five components:
 
-1. **Business Challenge & Context** — defining the project management problem.
-2. **AI-Augmented Decision Support** — generating predictive insights.
-3. **Integration into Scrum Events** — embedding insights into Agile workflows.
-4. **Governance, Explainability & Human Oversight** — ensuring accountable and human-in-the-loop approach.
-5. **Business Value** — translating insights into more informed project decisions.
+1. **Business Challenge & Context** — Define the project management problem and relevant business objectives.
+2. **AI-Augmented Decision Support** — Generate predictive insights to inform project decisions.
+3. **Integration into Scrum Events** — Consider how AI insights could support sprint planning, reviews, and retrospectives.
+4. **Governance, Explainability & Human Oversight** — Support transparency, accountability, and human review.
+5. **Business Value** — Evaluate whether AI-supported decisions contribute to better-informed project management.
 
-The framework positions AI as a decision-support capability within Agile teams, rather than as an autonomous replacement for project managers.
+The framework positions AI as a decision-support capability within Agile teams, not as an autonomous replacement for project managers.
 
 ## Business Relevance
 
-The research explores how organisations can use AI to:
+The research explores how organisations could use AI to:
 
 - Identify delivery risks earlier.
-- Support evidence-based sprint planning.
-- Improve the interpretation of operational project data.
-- Maintain human accountability for consequential decisions.
-- Establish a responsible foundation for future AI and agentic AI applications.
+- Support evidence-informed sprint planning.
+- Interpret operational project data more effectively.
+- Maintain human accountability for important decisions.
+- Establish a foundation for responsible future AI applications.
 
 ## Limitations
 
-The findings should be interpreted in the context of the available datasets, the exploratory nature of the research, and the limited survey sample. The framework is an empirically informed conceptual proposal; its effectiveness in live organisational environments requires further validation.
+The results are subject to the limitations of the available datasets, the modelling approach, and the exploratory survey design.
+
+Predictive performance on a test dataset does not guarantee generalisation to other organisations or projects. Survey findings from a limited sample cannot be assumed to represent the wider Agile community. The proposed framework requires further evaluation with real Agile teams before its practical effectiveness can be established.
 
 ## Future Work
 
 Potential next steps include:
 
-- Validating the framework with real Agile teams.
-- Testing the approach across different industries and project environments.
-- Evaluating the impact of AI-supported decisions on delivery performance.
-- Refining Human-in-the-Loop routing strategies.
-- Investigating governance requirements for increasingly autonomous and agentic AI systems.
+- Validating the predictive approach across different project environments.
+- Evaluating the framework with Agile practitioners and project teams.
+- Refining confidence-based human-in-the-loop routing strategies.
+- Investigating the impact of AI-supported decisions on delivery performance.
+- Exploring governance requirements for increasingly autonomous AI systems.
 
 ## Academic Context
 
-This project was developed as part of a Master's degree in Business Analytics at Universidad Europea, Madrid.
+Developed as part of the Master’s degree in Business Analytics at Universidad Europea, Madrid.
 
-**Research topic:** AI-Augmented Agile Project Management: A Framework for Enhancing Decision-Making, Performance, and Governance in
-Business Analytics Environments.
+**Thesis title:** *AI-Augmented Agile Project Management: A Framework for Enhancing Decision-Making, Performance, and Governance in Business Analytics Environments.*
 
-## Author's Note
+## About This Project
 
-This project reflects my interest in Business Analytics, Machine Learning, Explainable AI, and responsible AI usage. My goal was, on the one hand, to demonstrate whether AI can generate useful predictions in agile PM. On the other hand, it was important to me to examine how these predictions can be integrated into a transparent and explainable decision-making tool for agile teams without replacing human oversight. The anonymous survey conducted by agile praktiker provided valuable insights into the conditions, under which AI can be used in agile organizations in a way that is long-term effective and increases efficiency. 
+This project reflects my interest in Business Analytics, Machine Learning, Explainable AI, and responsible AI adoption.
+
+My goal was to investigate both the predictive potential of AI in Agile project management and the conditions under which its recommendations can be integrated into transparent, human-centred decision-making.
+
+By combining technical analysis with practitioner perspectives, I explored how AI can support more informed decisions while preserving human judgment and accountability.
+
+**Technologies:** Python · Machine Learning · XGBoost · SHAP · Statistical Analysis · AI Governance
